@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+
+}
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: red;
+    -webkit-text-stroke: 0.3vw orange;
+    text-transform: uppercase;
+
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left:0;
+    width:0%;
+    height: 100%;
+    color: greenyellow;
+    -webkit-text-stroke: 0vw orange ;
+    border-right: 2px solid greenyellow ;
+    overflow: hidden;
+    animation: animate 6% linear infinite;
+
+}@keyframes animate{
+    0%
+    {
+        width: 0;
+    }
+    {
+        width:100%;
+    }
+}
